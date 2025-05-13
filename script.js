@@ -6,6 +6,7 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  ctx.fillStyle = "white";
   ctx.strokeStyle = "rgb(46, 46, 44)";
   ctx.lineWidth = 2;
   ctx.shadowColor = "rgba(22, 22, 22, 0.7)";
@@ -45,18 +46,14 @@ window.addEventListener("load", function () {
       ctx.fillStyle = "rgb(255, 254, 255)";
       ctx.strokeStyle = "rgb(0, 0, 0)";
       drawShape(0, 0, radius, 1, 3);
-      // hue += 3;
-      // drawShape(50, 50, radius, inset, n);//rotate around center point
       ctx.rotate(-angle * 3);
       ctx.fillStyle = "rgb(0, 0, 0)";
       ctx.strokeStyle = "rgb(255, 255, 255)";
       drawShape((radius / 2) + 20, radius / 2, radius / 2, 0.5, 3);
-
       ctx.rotate(-angle/2);
       ctx.fillStyle = "rgb(243, 11, 11)";
       ctx.strokeStyle = "rgb(255, 255, 255)";
       drawShape(radius, radius + 20, radius * 0.5, 0.5, 5);
-
       angle += 0.1;
       ctx.restore();
     }
